@@ -1,28 +1,35 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require("path");
+const ESLintPlugin = require('eslint-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.ts',
   devtool: 'inline-source-map',
   module: {
-    rules: [    
-    {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: "babel-loader"
-      }
-    },
-     {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
         test: /\.css$/i,
-        use: ["style-loader",
-        { loader: "css-modules-typescript-loader"},
-        {
-            loader: "css-loader",
+        use: ['style-loader',
+          { loader: 'css-modules-typescript-loader' },
+          {
+            loader: 'css-loader',
             options: {
               importLoaders: 1,
               modules: true,
-            }}],
+            },
+          }],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        exclude: /node_modules/,
+        use: ['file-loader'],
       },
       {
         test: /\.tsx?$/,
@@ -32,20 +39,20 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.css',],
+    extensions: ['.tsx', '.ts', '.js', '.css'],
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-    devServer: {
+  devServer: {
     port: 3000,
     open: true,
-    hot: true
+    hot: true,
   },
   plugins: [new HtmlWebpackPlugin({
-    template: "./index.html",
+    template: './index.html',
     hash: true,
-    filename: './index.html'
-  })]
+    filename: './index.html',
+  }), new ESLintPlugin()],
 };

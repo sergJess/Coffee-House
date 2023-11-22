@@ -1,6 +1,14 @@
 {
   "devDependencies": {
+    "@babel/eslint-parser": "^7.23.3",
     "css-loader": "^6.8.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-webpack-plugin": "^4.0.1",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.1",
     "typescript": "^5.2.2",
@@ -8,14 +16,17 @@
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js --mode production",
     "start": "webpack-dev-server --mode=development"
   },
   "dependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
     "babel-loader": "^9.1.3",
     "css-modules-typescript-loader": "^4.0.1",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
     "html-webpack-plugin": "^5.5.3",
     "webpack-dev-server": "^4.15.1"
   }

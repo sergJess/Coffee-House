@@ -1,7 +1,8 @@
-import style from "./header.css";
+import style from './header.css';
+
 export default function Header() {
-  const header = document.createElement("header");
+  const header = document.createElement('header');
   header.classList.add(style.header);
-  header.textContent = "Jessie";
+  header.textContent = 'Jessie';
   return header;
 }
