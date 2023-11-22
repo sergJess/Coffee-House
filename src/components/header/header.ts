@@ -1,8 +1,7 @@
 import style from './header.css';
+import Node from '../../helpers/node/node';
 
 export default function Header() {
-  const header = document.createElement('header');
-  header.classList.add(style.header);
-  header.textContent = 'Jessie';
-  return header;
+  const head = Node({ tagName: 'header', classList: [style.header], textContext: 'Jess' });
+  return head;
 }
