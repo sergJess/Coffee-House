@@ -1,0 +1,15 @@
+.nav {
+  display: inline-flex;
+  column-gap: 40px;
+}
+.navLink {
+  display: inline-block;
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.navLink:focus {
+  color: var(--text-accent);
+}

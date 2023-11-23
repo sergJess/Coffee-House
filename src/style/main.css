@@ -1,20 +1,19 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
   font-size: 10px;
-  width: 100%;
-  min-height: 100%;
   overflow-x: hidden;
+  background-color: var(--background-body);
 }
+
 body {
   position: relative;
-  width: 100%;
-  min-height: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgb(46, 58, 43);
 }
+
 a {
   text-decoration: none;
 }
@@ -22,6 +21,7 @@ a {
 img {
   display: block;
 }
+
 ul {
   list-style: none;
 }
@@ -46,9 +46,4 @@ ul,
 li {
   margin: 0;
   padding: 0;
-}
-#root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

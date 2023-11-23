@@ -1,6 +1,7 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
   color: #fff;
-  min-height: 600px;
-  border-top: 8px solid #fff;
   font-size: 55px;
 }
