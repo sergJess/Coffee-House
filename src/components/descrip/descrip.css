@@ -1,0 +1,7 @@
+.container {
+  background-image: url('../../assets/images/description-bg/description.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  min-height: 600px;
+}

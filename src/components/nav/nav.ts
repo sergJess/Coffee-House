@@ -9,7 +9,7 @@ export default function Nav() {
       tagName: 'a',
       classList: [style.navLink],
       parent: navigation,
-      textContext: menuList[i],
+      textContent: menuList[i],
     });
     link.setAttribute('href', '#');
   }
