@@ -5,6 +5,7 @@
   background-size: auto;
   min-height: 600px;
   padding: 100px;
+  border-radius: 40px;
 }
 .title {
   max-width: 530px;

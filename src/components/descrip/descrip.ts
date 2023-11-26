@@ -2,7 +2,7 @@ import style from './descrip.css';
 import Node from '../../helpers/node/node';
 import Button from '../button/button';
 
-export default function Desribe() {
+export default function Describe() {
   const container = Node({ tagName: 'div', classList: [style.container] });
   const button = Button({ href: '#', textContent: 'Menu' });
   Node({
