@@ -1,0 +1,26 @@
+.item {
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+}
+
+.title {
+  padding: 20px 0 16px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.text {
+  max-width: 480px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.price {
+  padding: 16px 0 8px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
