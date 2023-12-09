@@ -5,6 +5,7 @@ interface CssExports {
   'sliderBlock': string;
   'sliderInner': string;
   'sliderTrack': string;
+  'sliderTrackTransition': string;
   'title': string;
   'titleMarked': string;
 }

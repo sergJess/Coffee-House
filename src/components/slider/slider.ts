@@ -8,6 +8,7 @@ import arrowRightSvg from '../../assets/images/slider/arrow-right.svg';
 import SliderItem from '../slider-item/slider-item';
 import SliderArrow from '../slider-arrow/slider-arrow';
 import sliderClick from '../../handlers/slider-click';
+import SliderHandler from '../../handlers/slider/slider';
 
 export default function Slider() {
   const slides = [
@@ -50,10 +51,6 @@ export default function Slider() {
   sliderBlock.append(arrowLeft);
   const sliderInner = Node({ tagName: 'div', classList: [style.sliderInner], parent: sliderBlock });
   const sliderTrack = Node({ tagName: 'div', parent: sliderInner, classList: [style.sliderTrack] });
-  arrowRight.onclick = () => {
-    sliderClick({ direction: 1, sliderTrack: sliderTrack, shift: 500 });
-    console.log(sliderClick({ direction: 1, sliderTrack: sliderTrack, shift: 500 }));
-  };
   for (let i = 0, length = slides.length; i < length; i++) {
     if (i === 0 && length > 1) {
       sliderTrack.append(
@@ -84,7 +81,19 @@ export default function Slider() {
       );
     }
   }
+  const afterDocumentLoaded = () => {
+    const sliderHandler = new SliderHandler({ sliderTrack: sliderTrack });
+    sliderHandler.setInitailSliderPosition();
+    arrowLeft.onclick = () => {
+      sliderHandler.sliderClick(1);
+    };
+    arrowRight.onclick = () => {
+      sliderClick({ direction: 1, sliderTrack: sliderTrack, shift: 500 });
+      console.log(sliderClick({ direction: 1, sliderTrack: sliderTrack, shift: 500 }));
+    };
+  };
   sliderBlock.append(arrowRight);
-
+  slider.classList.add(style.sliderTrackTransition);
+  window.addEventListener('load', afterDocumentLoaded, { once: true });
   return slider;
 }
