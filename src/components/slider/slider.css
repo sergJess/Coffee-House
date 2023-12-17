@@ -31,9 +31,4 @@
 .sliderTrack {
   position: relative;
   display: flex;
-  transform: translateX(0);
-}
-
-.sliderTrackTransition {
-  transition: trasform 0.7s ease-in-out;
 }
