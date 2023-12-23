@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  padding: 100px;
+  column-gap: 50px;
+  border-radius: 40px;
+  background-color: var(--background-container);
+}
+
+.column {
+}
+
+.motto {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  color: var(--text-light);
+}
+
+.mottoColored {
+  color: var(--text-accent);
+}
+
+.social {
+  display: flex;
+  column-gap: 12px;
+}
+
+.socialLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  min-height: 60px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--background-body);
+  border-radius: 50%;
+}
+
+.contactHeading {
+}
