@@ -38,4 +38,17 @@
 }
 
 .contactHeading {
+  margin: 32px 0 40px 0;
+  color: var(--text-light);
+}
+
+.contactBlock {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 16px;
+}
+
+.contactText {
+  color: var(--text-light);
 }

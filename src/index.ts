@@ -3,4 +3,3 @@ import './style/main.css';
 import App from './app/app';
 
 App();
-// root.append(Header(), Desribe());

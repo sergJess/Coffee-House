@@ -1,8 +1,12 @@
+import commonStyle from '../../style/common.css';
 import style from './footer.css';
 import Node from '../../helpers/node/node';
 import twitter from '../../assets/images/socials/twitter.svg';
 import facebook from '../../assets/images/socials/facebook.svg';
 import instagram from '../../assets/images/socials/instagram.svg';
+import placeMarkerImgSrc from '../../assets/images/contact/place-marker.svg';
+import timeImgSrc from '../../assets/images/contact/clock.svg';
+import phoneImgSrc from '../../assets/images/contact/phone.svg';
 
 export default function Footer() {
   const socialsImages = [
@@ -36,11 +40,50 @@ export default function Footer() {
     img.setAttribute('src', socialsImages[i].imgSrc);
   }
   const footerColumnSecond = Node({ tagName: 'div', classList: [style.column], parent: footer });
-  const contactHeading = Node({
+  Node({
     tagName: 'h3',
-    classList: [style.contactHeading],
+    classList: [style.contactHeading, commonStyle.heading3],
     parent: footerColumnSecond,
     textContent: 'Contact us',
+  });
+  const placeMarkerBlock = Node({
+    tagName: 'div',
+    classList: [style.contactBlock],
+    parent: footerColumnSecond,
+  });
+  const placeMarkerImg = Node({ tagName: 'img', parent: placeMarkerBlock });
+  placeMarkerImg.setAttribute('src', placeMarkerImgSrc);
+  Node({
+    tagName: 'span',
+    classList: [commonStyle.text, style.contactText],
+    parent: placeMarkerBlock,
+    textContent: '8558 Green Rd.,  LA',
+  });
+  const phoneBlock = Node({
+    tagName: 'div',
+    classList: [style.contactBlock],
+    parent: footerColumnSecond,
+  });
+  const phoneImg = Node({ tagName: 'img', parent: phoneBlock });
+  phoneImg.setAttribute('src', phoneImgSrc);
+  Node({
+    tagName: 'span',
+    classList: [commonStyle.text, style.contactText],
+    parent: phoneBlock,
+    textContent: '+1 (603) 555-0123',
+  });
+  const clockBlock = Node({
+    tagName: 'div',
+    classList: [style.contactBlock],
+    parent: footerColumnSecond,
+  });
+  const clockImg = Node({ tagName: 'img', parent: clockBlock });
+  clockImg.setAttribute('src', timeImgSrc);
+  Node({
+    tagName: 'span',
+    classList: [commonStyle.text, style.contactText],
+    parent: clockBlock,
+    textContent: 'Mon-Sat: 9:00 AM – 23:00 PM',
   });
   return footer;
 }

@@ -2,7 +2,9 @@
 // Please do not change this file!
 interface CssExports {
   'column': string;
+  'contactBlock': string;
   'contactHeading': string;
+  'contactText': string;
   'footer': string;
   'motto': string;
   'mottoColored': string;
